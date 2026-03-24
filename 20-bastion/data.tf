@@ -2,7 +2,7 @@ data "aws_ami" "redhat" {
   most_recent = true
 
   filter {
-    name   = "Redhat-9-DevOps-Practice"
+    name   = "name"
     values = ["Redhat-9-DevOps-Practice"]
   }
 
@@ -10,6 +10,10 @@ data "aws_ami" "redhat" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+filter {
+name   = "root-device-type"
+values = ["ebs"]
+}
 
   owners = ["973714476881"] # Canonical
 }
