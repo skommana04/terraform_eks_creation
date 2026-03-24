@@ -9,7 +9,7 @@ terraform {
 
     backend "s3" {
     bucket = "saibucket876" 
-    key    = "bastion"
+    key    = "bastion/terraform.tfstate"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
