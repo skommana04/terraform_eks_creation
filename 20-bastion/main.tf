@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
     delete_on_termination = true
     
   }
-  user_data = file(bastion.sh)
+  user_data = file("bastion.sh")
 
 
     tags = merge(
